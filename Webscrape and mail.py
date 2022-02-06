@@ -6,6 +6,10 @@ import warnings
 import time
 import numpy as np
 import datetime
+import re
+import xlwings
+import pandas as pd
+from openpyxl import Workbook, load_workbook
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
@@ -48,9 +52,29 @@ time.sleep(10)
 certificate = browser.find_element_by_css_selector("[tag = value]")
 #print ('Certifications :', certificate.text)
 split_count = np.array(certificate.text)
+array_count = split_count.split(" ")
+
+overall_Count = re.sub("[^0-9]", "" , array_count[1])
+Admin_Count = re.sub("[^0-9]", "" , array_count[18])
+Architect_Count = re.sub("[^0-9]", "" , array_count[20])
+Consultant_Count = re.sub("[^0-9]", "" , array_count[22])
+Developer_Count = re.sub("[^0-9]", "" , array_count[24])
+Marketing_Count = re.sub("[^0-9]", "" , array_count[26])
+
+file_path = "Enter your excel file path"
+wb = load_workbook(file_path)
+ws = wb.active
+ws['B2'].value = Admin_Count
+ws['B3'].value = Architect_Count
+ws['B4'].value = Consultant_Count
+ws['B5'].value = Developer_Count
+ws['B6'].value = Marketing_Count
+ws['B7'].value = overall_Count
+
+wb.save(file_path)
 
 msg = EmailMessage()
-msg['Subject'] =  str(date) + gap + '[CERTIFICATION Count]'
+msg['Subject'] =  str(date) + gap + 'Your Messae'
 msg['From'] = EMAIL_ADDRESS
 msg['To'] = recipients
 msg.set_content(certificate.text)
