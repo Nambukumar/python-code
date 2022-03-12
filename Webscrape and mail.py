@@ -34,6 +34,7 @@ date = str(day) + gap + str(month) + gap + str(toshi)
 EMAIL_ADDRESS = os.environ.get('DB_USER')
 EMAIL_PASSWORD = os.environ.get('DB_PASS')
 
+recipients = ['mail id 1','mail id 2']
 
 hcl_url = 'https://appexchange.salesforce.com/appxConsultingListingDetail?listingId=a0N30000003I3iwEAC'
 cts_url = 'https://appexchange.salesforce.com/appxConsultingListingDetail?listingId=a0N30000001qFhiEAE'
