@@ -34,7 +34,6 @@ date = str(day) + gap + str(month) + gap + str(toshi)
 EMAIL_ADDRESS = os.environ.get('DB_USER')
 EMAIL_PASSWORD = os.environ.get('DB_PASS')
 
-recipients = ['sample@testmail.com','sample2@testmail.com']
 
 hcl_url = 'https://appexchange.salesforce.com/appxConsultingListingDetail?listingId=a0N30000003I3iwEAC'
 cts_url = 'https://appexchange.salesforce.com/appxConsultingListingDetail?listingId=a0N30000001qFhiEAE'
@@ -47,16 +46,18 @@ acc_url = 'https://appexchange.salesforce.com/appxConsultingListingDetail?listin
 cap_url = 'https://appexchange.salesforce.com/appxConsultingListingDetail?listingId=a0N30000003Hub3EAC'
 techm_url = 'https://appexchange.salesforce.com/appxConsultingListingDetail?listingId=a0N30000001rksIEAQ'
 livearea_url = 'https://appexchange.salesforce.com/appxConsultingListingDetail?listingId=a0N3A00000EtDunUAF'
+mindtree_url = 'https://appexchange.salesforce.com/appxConsultingListingDetail?listingId=a0N30000001gp0hEAA'
+slalom_url = 'https://appexchange.salesforce.com/appxConsultingListingDetail?listingId=a0N30000009xUI8EAM'
 
 ###################################################_HCL_################################################################################
 browser = webdriver.Chrome(executable_path=ChromeDriverManager().install())
 browser.get(hcl_url)
-time.sleep(8)
+time.sleep(12)
 
 warnings.filterwarnings("ignore", category=DeprecationWarning) 
 hcl_button = browser.find_element_by_css_selector("[aria-controls = tab-default-3]")
 hcl_button.click()
-time.sleep(8)	
+time.sleep(12)	
 hcl_certificate = browser.find_element_by_css_selector("[id = expersite-certifications-info-id]")
 #certificate2 = browser.find_element_by_css_selector("[id = accordion-details-01]")
 #print ('Certifications :', certificate.text)
@@ -77,12 +78,12 @@ browser.close()
 
 browser = webdriver.Chrome(executable_path=ChromeDriverManager().install())
 browser.get(cts_url)	
-time.sleep(8)
+time.sleep(12)
 
 warnings.filterwarnings("ignore", category=DeprecationWarning) 
 cts_button = browser.find_element_by_css_selector("[aria-controls = tab-default-3]")
 cts_button.click()
-time.sleep(8)	
+time.sleep(12)	
 cts_certificate = browser.find_element_by_css_selector("[id = expersite-certifications-info-id]")
 #certificate2 = browser.find_element_by_css_selector("[id = accordion-details-01]")
 #print ('Certifications :', certificate.text)
@@ -103,12 +104,12 @@ browser.close()
 
 browser = webdriver.Chrome(executable_path=ChromeDriverManager().install())
 browser.get(tcs_url)	
-time.sleep(8)
+time.sleep(15)
 
 warnings.filterwarnings("ignore", category=DeprecationWarning) 
 tcs_button = browser.find_element_by_css_selector("[aria-controls = tab-default-3]")
 tcs_button.click()
-time.sleep(8)	
+time.sleep(15)	
 tcs_certificate = browser.find_element_by_css_selector("[id = expersite-certifications-info-id]")
 #certificate2 = browser.find_element_by_css_selector("[id = accordion-details-01]")
 #print ('Certifications :', certificate.text)
@@ -129,12 +130,12 @@ browser.close()
 
 browser = webdriver.Chrome(executable_path=ChromeDriverManager().install())
 browser.get(infosys_url)	
-time.sleep(8)
+time.sleep(15)
 
 warnings.filterwarnings("ignore", category=DeprecationWarning) 
 infosys_button = browser.find_element_by_css_selector("[aria-controls = tab-default-3]")
 infosys_button.click()
-time.sleep(8)	
+time.sleep(15)	
 infosys_certificate = browser.find_element_by_css_selector("[id = expersite-certifications-info-id]")
 #certificate2 = browser.find_element_by_css_selector("[id = accordion-details-01]")
 #print ('Certifications :', certificate.text)
@@ -155,12 +156,12 @@ browser.close()
 
 browser = webdriver.Chrome(executable_path=ChromeDriverManager().install())
 browser.get(wipro_url)	
-time.sleep(8)
+time.sleep(12)
 
 warnings.filterwarnings("ignore", category=DeprecationWarning) 
 wipro_button = browser.find_element_by_css_selector("[aria-controls = tab-default-3]")
 wipro_button.click()
-time.sleep(8)	
+time.sleep(12)	
 wipro_certificate = browser.find_element_by_css_selector("[id = expersite-certifications-info-id]")
 #certificate2 = browser.find_element_by_css_selector("[id = accordion-details-01]")
 #print ('Certifications :', certificate.text)
@@ -181,12 +182,12 @@ browser.close()
 
 browser = webdriver.Chrome(executable_path=ChromeDriverManager().install())
 browser.get(IBM_url)	
-time.sleep(8)
+time.sleep(12)
 
 warnings.filterwarnings("ignore", category=DeprecationWarning) 
 IBM_button = browser.find_element_by_css_selector("[aria-controls = tab-default-3]")
 IBM_button.click()
-time.sleep(8)	
+time.sleep(12)	
 IBM_certificate = browser.find_element_by_css_selector("[id = expersite-certifications-info-id]")
 #certificate2 = browser.find_element_by_css_selector("[id = accordion-details-01]")
 #print ('Certifications :', certificate.text)
@@ -207,12 +208,12 @@ browser.close()
 
 browser = webdriver.Chrome(executable_path=ChromeDriverManager().install())
 browser.get(del_url)	
-time.sleep(8)
+time.sleep(12)
 
 warnings.filterwarnings("ignore", category=DeprecationWarning) 
 del_button = browser.find_element_by_css_selector("[aria-controls = tab-default-3]")
 del_button.click()
-time.sleep(8)	
+time.sleep(12)	
 del_certificate = browser.find_element_by_css_selector("[id = expersite-certifications-info-id]")
 #certificate2 = browser.find_element_by_css_selector("[id = accordion-details-01]")
 #print ('Certifications :', certificate.text)
@@ -233,12 +234,12 @@ browser.close()
 
 browser = webdriver.Chrome(executable_path=ChromeDriverManager().install())
 browser.get(acc_url)	
-time.sleep(8)
+time.sleep(12)
 
 warnings.filterwarnings("ignore", category=DeprecationWarning) 
 acc_button = browser.find_element_by_css_selector("[aria-controls = tab-default-3]")
 acc_button.click()
-time.sleep(8)	
+time.sleep(12)	
 acc_certificate = browser.find_element_by_css_selector("[id = expersite-certifications-info-id]")
 #certificate2 = browser.find_element_by_css_selector("[id = accordion-details-01]")
 #print ('Certifications :', certificate.text)
@@ -259,12 +260,12 @@ browser.close()
 
 browser = webdriver.Chrome(executable_path=ChromeDriverManager().install())
 browser.get(cap_url)	
-time.sleep(8)
+time.sleep(12)
 
 warnings.filterwarnings("ignore", category=DeprecationWarning) 
 cap_button = browser.find_element_by_css_selector("[aria-controls = tab-default-3]")
 cap_button.click()
-time.sleep(8)	
+time.sleep(12)	
 cap_certificate = browser.find_element_by_css_selector("[id = expersite-certifications-info-id]")
 #certificate2 = browser.find_element_by_css_selector("[id = accordion-details-01]")
 #print ('Certifications :', certificate.text)
@@ -285,12 +286,12 @@ browser.close()
 
 browser = webdriver.Chrome(executable_path=ChromeDriverManager().install())
 browser.get(techm_url)	
-time.sleep(8)
+time.sleep(12)
 
 warnings.filterwarnings("ignore", category=DeprecationWarning) 
 techm_button = browser.find_element_by_css_selector("[aria-controls = tab-default-3]")
 techm_button.click()
-time.sleep(8)	
+time.sleep(12)	
 techm_certificate = browser.find_element_by_css_selector("[id = expersite-certifications-info-id]")
 #certificate2 = browser.find_element_by_css_selector("[id = accordion-details-01]")
 #print ('Certifications :', certificate.text)
@@ -311,12 +312,12 @@ browser.close()
 
 browser = webdriver.Chrome(executable_path=ChromeDriverManager().install())
 browser.get(livearea_url)	
-time.sleep(8)
+time.sleep(12)
 
 warnings.filterwarnings("ignore", category=DeprecationWarning) 
 livearea_button = browser.find_element_by_css_selector("[aria-controls = tab-default-3]")
 livearea_button.click()
-time.sleep(8)	
+time.sleep(12)	
 livearea_certificate = browser.find_element_by_css_selector("[id = expersite-certifications-info-id]")
 #certificate2 = browser.find_element_by_css_selector("[id = accordion-details-01]")
 #print ('Certifications :', certificate.text)
@@ -333,11 +334,64 @@ livearea_Marketing_Count = re.sub("[^0-9]", "" , livearea_array_count[26])
 
 browser.close()
 
+###################################################_MINDTREE_################################################################################
 
-file_path = "C:\\Users\\nambu\\Desktop\\Live Salesforce Certifications Count.xlsx"
+browser = webdriver.Chrome(executable_path=ChromeDriverManager().install())
+browser.get(mindtree_url)
+time.sleep(12)
+
+warnings.filterwarnings("ignore", category=DeprecationWarning) 
+mindtree_button = browser.find_element_by_css_selector("[aria-controls = tab-default-3]")
+mindtree_button.click()
+time.sleep(12)	
+mindtree_certificate = browser.find_element_by_css_selector("[id = expersite-certifications-info-id]")
+#certificate2 = browser.find_element_by_css_selector("[id = accordion-details-01]")
+#print ('Certifications :', certificate.text)
+#split_count = np.array(certificate.text)
+mindtree_split_count = mindtree_certificate.text
+mindtree_array_count = mindtree_split_count.split(" ")
+
+mindtreeoverall = re.sub("[^0-9]", "" , mindtree_array_count[1])
+mindtree_Admin_Count = re.sub("[^0-9]", "" , mindtree_array_count[18])
+mindtree_Architect_Count = re.sub("[^0-9]", "" , mindtree_array_count[20])
+mindtree_Consultant_Count = re.sub("[^0-9]", "" , mindtree_array_count[22])
+mindtree_Developer_Count = re.sub("[^0-9]", "" , mindtree_array_count[24])
+mindtree_Marketing_Count = re.sub("[^0-9]", "" , mindtree_array_count[26])
+
+browser.close()
+
+###################################################_SLALOM_#####################################################################################
+
+browser = webdriver.Chrome(executable_path=ChromeDriverManager().install())
+browser.get(slalom_url)
+time.sleep(12)
+
+warnings.filterwarnings("ignore", category=DeprecationWarning) 
+slalom_button = browser.find_element_by_css_selector("[aria-controls = tab-default-3]")
+slalom_button.click()
+time.sleep(12)	
+slalom_certificate = browser.find_element_by_css_selector("[id = expersite-certifications-info-id]")
+#certificate2 = browser.find_element_by_css_selector("[id = accordion-details-01]")
+#print ('Certifications :', certificate.text)
+#split_count = np.array(certificate.text)
+slalom_split_count = slalom_certificate.text
+slalom_array_count = slalom_split_count.split(" ")
+
+slalomoverall = re.sub("[^0-9]", "" , slalom_array_count[1])
+slalom_Admin_Count = re.sub("[^0-9]", "" , slalom_array_count[18])
+slalom_Architect_Count = re.sub("[^0-9]", "" , slalom_array_count[20])
+slalom_Consultant_Count = re.sub("[^0-9]", "" , slalom_array_count[22])
+slalom_Developer_Count = re.sub("[^0-9]", "" , slalom_array_count[24])
+slalom_Marketing_Count = re.sub("[^0-9]", "" , slalom_array_count[26])
+
+browser.close()
+
+
+file_path = "file path"
 wb = load_workbook(file_path)
 ws = wb.worksheets[0]
 ws2 = wb.worksheets[1]
+ws9 = wb.worksheets[8]
 
 ######_HCL_Excel_Update###########
 ws['B2'].value = hcl_Admin_Count
@@ -346,6 +400,13 @@ ws['B4'].value = hcl_Consultant_Count
 ws['B5'].value = hcl_Developer_Count
 ws['B6'].value = hcl_Marketing_Count
 ws['B7'].value = hcloverall
+
+ws9['B2'].value = hcl_Admin_Count
+ws9['C2'].value = hcl_Architect_Count
+ws9['D2'].value = hcl_Consultant_Count
+ws9['E2'].value = hcl_Developer_Count
+ws9['F2'].value = hcl_Marketing_Count
+ws9['G2'].value = hcloverall
 
 ######_CTS_Excel_Update###########
 
@@ -439,17 +500,41 @@ ws['L5'].value = livearea_Developer_Count
 ws['L6'].value = livearea_Marketing_Count
 ws['L7'].value = liveareaoverall
 
+######_Mindtree_Excel_Update###########
+
+ws['M2'].value = mindtree_Admin_Count
+ws['M3'].value = mindtree_Architect_Count
+ws['M4'].value = mindtree_Consultant_Count
+ws['M5'].value = mindtree_Developer_Count
+ws['M6'].value = mindtree_Marketing_Count
+ws['M7'].value = mindtreeoverall
+
+######_Slalom_Excel_Update###########
+
+ws['N2'].value = slalom_Admin_Count
+ws['N3'].value = slalom_Architect_Count
+ws['N4'].value = slalom_Consultant_Count
+ws['N5'].value = slalom_Developer_Count
+ws['N6'].value = slalom_Marketing_Count
+ws['N7'].value = slalomoverall
+
 wb.save(file_path)
 
-# msg = EmailMessage()
-# msg['Subject'] =  str(date) + gap + '[HCL Salesforce CERTIFICATION Count]'
-# msg['From'] = EMAIL_ADDRESS
-# msg['To'] = recipients
-# msg.set_content(hcl_certificate.text)
+msg = EmailMessage()
+msg['Subject'] =  str(date) + gap + '[Subject]'
+#msg['From'] = EMAIL_ADDRESS
+msg['To'] = recipients
+msg.set_content(hcl_split_count)
 
-# with smtplib.SMTP_SSL('smtp.gmail.com',465) as smtp:
-# 		smtp.login(EMAIL_ADDRESS, EMAIL_PASSWORD)
-# 		smtp.send_message(msg) 
+with open(file_path, 'rb') as f:
+		file_data = f.read()
+		file_name = f.name
+		msg.add_attachment(file_data, maintype="application", subtype="xlsx", filename=file_name)
+
+
+with smtplib.SMTP_SSL('smtp.gmail.com',465) as smtp:
+		smtp.login(EMAIL_ADDRESS, EMAIL_PASSWORD)
+		smtp.send_message(msg) 
 
 
 #os.system("taskkill /f /im chrome.exe")	
